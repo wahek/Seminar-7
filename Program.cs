@@ -44,13 +44,42 @@ void PrintArray(int[,] array)
 // i = 4 j = 2 → такого числа нет в массиве
 // i = 1, j = 2 → 2
 
-Console.WriteLine("Ввелите позицию строки”");
-int i = int.Parse(Console.ReadLine()!);
-Console.WriteLine("Введите позицию столбца");
-int j = int.Parse(Console.ReadLine()!);
-int row = 3;
-int column = 4;
-int[,] array1 = GetArray(row, column, 0, 9);
-PrintArray(array1);
-if ((i >= 0 && i <= row) && (j >= 0 && j <= column)) Console.WriteLine($"{array1[i, j]}");
-else Console.WriteLine("Такого числа нет");
+// Console.WriteLine("Ввелите позицию строки"");
+// int i = int.Parse(Console.ReadLine()!);
+// Console.WriteLine("Введите позицию столбца");
+// int j = int.Parse(Console.ReadLine()!);
+// int row = 3;
+// int column = 4;
+// int[,] array1 = GetArray(row, column, 0, 9);
+// PrintArray(array1);
+// if ((i >= 0 && i <= row) && (j >= 0 && j <= column)) Console.WriteLine($"{array1[i, j]}");
+// else Console.WriteLine("Такого числа нет");
+
+// Задача 52. Задайте двумерный массив из целых числе. Найтиде среднее арифметическое элементов в каждом стольбце.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// Среднее арифметическое каждого столбца; 4,6; 5,6; 3.
+
+Console.WriteLine("Введите количество строк");
+int row = int.Parse(Console.ReadLine()!);
+Console.WriteLine("Введите количество столбцов");
+int column = int.Parse(Console.ReadLine()!);
+int[,] array2 = GetArray(row, column, 1, 9);
+PrintArray(array2);
+Console.WriteLine();
+GetArithmeticMean(array2);
+var GetArithmeticMean(array2){
+for(int i = 0; i < array2.GetLength(0); i++){
+var result = 0;
+int count = 0;
+for(int j = 0; j < array2.GetLength(1); j++){
+result += array2[i, j];
+count++;
+if(count == array2){
+arithmeticMean = result / array2.GetLenth(1);
+return arithmeticMean;
+{
+{
+{
