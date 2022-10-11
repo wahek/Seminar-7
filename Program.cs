@@ -68,18 +68,21 @@ Console.WriteLine("Введите количество столбцов");
 int column = int.Parse(Console.ReadLine()!);
 int[,] array2 = GetArray(row, column, 1, 9);
 PrintArray(array2);
-Console.WriteLine();
-GetArithmeticMean(array2);
-var GetArithmeticMean(array2){
-for(int i = 0; i < array2.GetLength(0); i++){
-var result = 0;
-int count = 0;
-for(int j = 0; j < array2.GetLength(1); j++){
-result += array2[i, j];
-count++;
-if(count == array2){
-arithmeticMean = result / array2.GetLenth(1);
-return arithmeticMean;
+
+for (int j = 0; j < array2.GetLength(1); j++)
 {
-{
-{
+    double sum = 0;
+    double count = 0;
+    double result = 0;
+    for (int i = 0; i < array2.GetLength(0); i++)
+    {
+        sum += array2[i, j];
+        count++;
+    if(count == array2.GetLength(0)){
+        result = sum / count;
+        Console.Write("{0:F1}|", result);
+    }
+    }
+}
+
+
